@@ -58,7 +58,7 @@ def play_game():
         if current_offer > df.loc[df['name'] == current_player, 'bribe_max'].item():
             df.loc[df['name'] == current_player, 'bribe_max'] = current_offer
         enter_statement(f"Corleone: \"This money buys your silence\"")
-        enter_statement(f"Corleone: \"I better don't see you no more around here.\"")
+        enter_statement(f"Corleone: \"I better not see you around here no more.\"")
         enter_statement(f"Congrats, you made {current_offer}$!")
     if lost == True:
         df.loc[df['name'] == current_player, 'games_lost'] += 1
