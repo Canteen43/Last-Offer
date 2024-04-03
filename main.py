@@ -22,7 +22,7 @@ if new_player == "yes":
     current_player = input("Enter your name: ")
     while df['name'].isin([current_player]).any():
         current_player = input("That name is taken. Use another: ")
-    code = input("Set your secret code for future games: ")
+    code = input("Set your secret code for future games: (might go online) ")
     new_row = {'name': current_player, 'games_total': 0, 'games_lost': 0,
                'bribe_max': 0, 'bribe_total': 0, 'code': code}
     df.loc[len(df)] = new_row
