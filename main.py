@@ -1,7 +1,6 @@
 import random
 import pandas as pd
 import os
-import numpy as np
 
 def ask_question (question, answers=["yes", "no"]):
     answer = input(f"{question} {answers} ")
@@ -80,11 +79,12 @@ def play_game():
     df_show.drop(columns=['name', 'games_total', 'games_lost', 'bribe_max', 'bribe_total', 'code'], inplace=True)
     df_show.sort_values(by="Bribe-Per-Game", ascending=False, inplace=True)
     print(df_show.head(10).to_string(index=False))
+    print("")
 
 wants_play = ask_question("Do you want to play a game? ")
 while wants_play == "yes":
     play_game()
-    wants_play = ask_question("\nDo you want to play another round? ")
+    wants_play = ask_question("Do you want to play another round? ")
 enter_statement("\nEnter to exit. ")
 """
 """
